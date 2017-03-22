@@ -34,13 +34,14 @@ section.popular-bikes
               option(value="4") Крыса Лариса
             button(type="submit" class="btn btn--submit") Купить
 section.contact-us
-  h2.contact-us__title Contact-us
-  form.contact-us__form
-    fieldset
-      legend Подалуйста, свяжитесь с нами по всем интересующим вас вопросам
-      input(type="text" name="first-name" value="Ваше имя")
-      input(type="text" name="second-name" value="Ваше имя")
-      input(type="text" name="email" value="Ваш E-mail")
-      textarea Ваше вопрос...
-      button(type="submit" class="btn  btn--submit-large") Отправить
+  .container
+    h2.contact-us__title Contact-us
+    form.contact-us__form
+      fieldset
+        legend Подалуйста, свяжитесь с нами по всем интересующим вас вопросам.
+        input(type="text" name="first-name" placeholder="Ваше имя")
+        input(type="text" name="second-name" placeholder="Ваше имя")
+        input(type="text" name="email" placeholder="Ваш E-mail")
+        textarea(rows="5" cols="40" placeholder="Ваше вопрос...")
+        button(type="submit" class="btn  btn--submit-large") Отправить
 
