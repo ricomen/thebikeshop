@@ -1,0 +1,60 @@
+.main-nav {
+  &__list {
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 10px 13px;
+    color: #fff;
+    text-transform: uppercase;
+    a {
+      display: block;
+      color: #fff;
+    }
+    &:last-child:hover {
+      background: none;
+      opacity: 0.5;
+    }
+    &:hover {
+      background: @yellow;
+      border-radius: 8px  8px 0 0;
+      color: #000;
+      a {
+        color: inherit;
+        text-transform: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  &__cart {
+    display: block;
+    background: url("../img/sprite.png") no-repeat 0px 0px;
+    width: 26px;
+    height: 26px;
+  }
+  &__submenu-list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+
+    left: 0;
+  }
+  &__submenu-item {
+    padding: 10px 13px;
+  }
+  &__item:hover &__submenu-list {
+    display: block;
+    background: @yellow;
+    border-radius: 0  8px 8px 8px;
+  }
+}

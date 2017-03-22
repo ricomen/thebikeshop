@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1200">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>   
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__top">
+          <div class="logo"><a href="#"></a></div>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">Велосипеды
+                <ul class="main-nav__submenu-list">
+                  <li class="main-nav__submenu-item"><a href="#">Односкоростные</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Городские</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Премиум</a></li>
+                </ul>
+              </li>
+              <li class="main-nav__item">Запчасти
+                <ul class="main-nav__submenu-list">
+                  <li class="main-nav__submenu-item"><a href="#">Односкоростные</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Городские</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Премиум</a></li>
+                </ul>
+              </li>
+              <li class="main-nav__item">Аксессуары
+                <ul class="main-nav__submenu-list">
+                  <li class="main-nav__submenu-item"><a href="#">Односкоростные</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Городские</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Премиум</a></li>
+                </ul>
+              </li>
+              <li class="main-nav__item">Доплонительно
+                <ul class="main-nav__submenu-list">
+                  <li class="main-nav__submenu-item"><a href="#">Односкоростные</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Городские</a></li>
+                  <li class="main-nav__submenu-item"><a href="#">Премиум</a></li>
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__cart"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div><a class="btn btn--toCategory" id="to-category">111</a>
+    </header>
+    <section class="categories">
+      <div class="container">
+        <h2 class="categories__title">Категории</h2>
+        <ul class="categories__list">
+          <li class="categories__item">
+            <h2 class="categories__title">Односкоростные</h2>
+            <p class="categories__description">Готовы к испытаниям?</p><a class="btn btn--store" href="#">Перейти в магазин</a>
+          </li>
+          <li class="categories__item">
+            <h2 class="categories__title">Премиум серия</h2>
+            <p class="categories__description">Эксклюзивные компоненты</p><a class="btn btn--store" href="#">Перейти в магазин</a>
+          </li>
+          <li class="categories__item">
+            <h2 class="categories__title">Городские велосипеды</h2>
+            <p class="categories__description">Для городских улиц</p><a class="btn btn--store" href="#">Перейти в магазин</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="popular-bikes">
+      <h2 class="categories__title">Популярные
+        <div class="popular-bikes__gallery">
+          <article class="popular-bike__item">
+            <div class="popular-bike__item-img"><img src="img/content/bicycles/big-boy.jpg" width="430" height="290"/></div>
+            <footer class="popular-bike__item-footer">
+              <div class="wrapper">
+                <h3 class="popular-bike__item-title">Односкоростные</h3>
+                <p class="popular-bike__item-price">$249</p>
+              </div>
+              <form class="popular-bike__form" action="/" method="get">
+                <select name="config">
+                  <option disabled>Выбрать модель</option>
+                  <option value="1">Чебурашка</option>
+                  <option selected value="2">Крокодил Гена</option>
+                  <option value="3">Шапокляк</option>
+                  <option value="4">Крыса Лариса</option>
+                </select>
+                <button class="btn btn--submit" type="submit">Купить</button>
+              </form>
+            </footer>
+          </article>
+        </div>
+      </h2>
+    </section>
+    <section class="contact-us">
+      <h2 class="contact-us__title">Contact-us</h2>
+      <form class="contact-us__form">
+        <fieldset>
+          <legend>Подалуйста, свяжитесь с нами по всем интересующим вас вопросам</legend>
+          <input type="text" name="first-name" value="Ваше имя">
+          <input type="text" name="second-name" value="Ваше имя">
+          <input type="text" name="email" value="Ваш E-mail">
+          <textarea>Ваше вопрос...</textarea>
+          <button class="btn  btn--submit-large" type="submit">Отправить</button>
+        </fieldset>
+      </form>
+    </section>
+    <footer class="page-footer">
+      <div class="logo"><a class="icon-logo" href="index.html"></a></div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a>Велосипеды</a></li>
+          <li class="main-nav__item"><a>Запчасти</a></li>
+          <li class="main-nav__item"><a>Аксессуары</a></li>
+          <li class="main-nav__item"><a>Доплонительно</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <!--script(src="js/svg.js")-->
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
