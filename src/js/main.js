@@ -7,6 +7,6 @@ $(document).ready(function () {
     console.log(Math.floor(catpos.top));
     $("html, body").animate({
       scrollTop: catpos.top
-    }, 300);
+    }, 700);
   });
 });

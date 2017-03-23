@@ -1,41 +1,70 @@
 section.categories
   .container
     h2.categories__title Категории
-    ul.categories__list
-      li.categories__item
-        h2.categories__title Односкоростные
+    div.categories__list
+      div.categories__item.categories__item--backgr-1
+        h2.categories__item-title Односкоростные
         p.categories__description Готовы к испытаниям?
-        a.btn.btn--store(href="#") Перейти в магазин
-      li.categories__item
-        h2.categories__title Премиум серия
+        a.btn.btn--store(href="#") Купить
+      div.categories__item.categories__item--backgr-2
+        h2.categories__item-title Премиум серия
         p.categories__description Эксклюзивные компоненты
-        a.btn.btn--store(href="#") Перейти в магазин
-      li.categories__item
-        h2.categories__title Городские велосипеды
+        a.btn.btn--store(href="#") Купить
+      div.categories__item.categories__item--backgr-3
+        h2.categories__item-title Городские велосипеды
         p.categories__description Для городских улиц
-        a.btn.btn--store(href="#") Перейти в магазин
-
+        a.btn.btn--store(href="#") Купить
 section.popular-bikes
-  h2.categories__title Популярные
-    .popular-bikes__gallery
-      article.popular-bike__item
-        div.popular-bike__item-img
-          img(src="img/content/bicycles/big-boy.jpg" width="430" height="290")/
-        footer.popular-bike__item-footer
-          .wrapper
-            h3.popular-bike__item-title Односкоростные
-            p.popular-bike__item-price $249
-          form.popular-bike__form(action="/" method="get")
-            select(name="config")
-              option(disabled) Выбрать модель
-              option(value="1") Чебурашка
-              option(selected value="2") Крокодил Гена
-              option(value="3") Шапокляк
-              option(value="4") Крыса Лариса
-            button(type="submit" class="btn btn--submit") Купить
+  h2.popular-bikes__title Популярные
+  .popular-bikes__gallery
+    article.popular-bikes__item
+      div.popular-bikes__item-img
+        img(src="img/content/bicycles/foxed-gear.jpg" width="430" height="290")/
+      footer.popular-bikes__item-footer
+        .popular-bikes__label
+          h3.popular-bikes__item-title Односкоростные
+          p.popular-bikes__item-price $249
+        form.popular-bikes__form(action="/" method="get")
+          select(name="option")
+            option(selected disabled) Опции
+            option(value="1") Чебурашка
+            option(value="2") Крокодил Гена
+            option(value="3") Шапокляк
+            option(value="4") Крыса Лариса
+          button(type="submit" class="btn btn--buy") Купить
+    article.popular-bikes__item
+      div.popular-bikes__item-img
+        img(src="img/content/bicycles/big-boy.jpg" width="430" height="290")/
+      footer.popular-bikes__item-footer
+        .popular-bikes__label
+          h3.popular-bikes__item-title Односкоростные
+          p.popular-bikes__item-price $249
+        form.popular-bikes__form(action="/" method="get")
+          select(name="option")
+            option(selected disabled) Опции
+            option(value="1") Чебурашка
+            option(value="2") Крокодил Гена
+            option(value="3") Шапокляк
+            option(value="4") Крыса Лариса
+          button(type="submit" class="btn btn--buy") Купить
+    article.popular-bikes__item
+      div.popular-bikes__item-img
+        img(src="img/content/bicycles/sanchaez.jpg" width="430" height="290")/
+      footer.popular-bikes__item-footer
+        .popular-bikes__label
+          h3.popular-bikes__item-title Односкоростные
+          p.popular-bikes__item-price $249
+        form.popular-bikes__form(action="/" method="get")
+          select(name="option")
+            option(selected disabled) Опции
+            option(value="1") Чебурашка
+            option(value="2") Крокодил Гена
+            option(value="3") Шапокляк
+            option(value="4") Крыса Лариса
+          button(type="submit" class="btn btn--buy") Купить
 section.contact-us
   .container
-    h2.contact-us__title Contact-us
+    h2.contact-us__title Связаться с нами
     form.contact-us__form
       fieldset
         legend Подалуйста, свяжитесь с нами по всем интересующим вас вопросам.

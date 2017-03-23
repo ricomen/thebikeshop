@@ -111,7 +111,7 @@ gulp.task('css-libs', ['less'], function() {
 gulp.task('watch', ['browser-sync', 'less'], function() {
   gulp.watch('src/less/**/*.less', ['less']);
   gulp.watch('src/pug/**/*.pug', ['pug']);
-  gulp.watch('src/js/main.js', ['lint']);
+  //gulp.watch('src/js/main.js', ['lint']);
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/css/*.css', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);

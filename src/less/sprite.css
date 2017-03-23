@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arrow-slider {
   background-image: url(../img/sprite.png);
-  background-position: 0px -96px;
+  background-position: 0px -142px;
   width: 58px;
   height: 58px;
 }
@@ -28,15 +28,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 26px;
   height: 26px;
 }
-.icon-logo {
+.icon-logo-black {
   background-image: url(../img/sprite.png);
   background-position: 0px -36px;
+  width: 115px;
+  height: 36px;
+}
+.icon-logo {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -82px;
   width: 160px;
   height: 50px;
 }
 .icon-scroll {
   background-image: url(../img/sprite.png);
-  background-position: 0px -164px;
+  background-position: 0px -210px;
   width: 66px;
   height: 77px;
 }

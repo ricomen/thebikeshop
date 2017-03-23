@@ -524,11 +524,17 @@ template {
 html {
   font-size: 16px;
 
-  min-width: 320px;
   height: 100%;
+}
+@media (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
 }
 body {
   font-family: "Arial", sans-serif;
+
+  min-width: 320px;
 
   color: #000;
   background: #fff;
@@ -546,14 +552,16 @@ img {
   padding: 0 2.5%;
 }
 .page-header {
-  overflow: hidden;
+  position: relative;
 
-  height: 980px;
+  overflow: hidden;
 
   background: url("../img/slider/slide-1.jpg") no-repeat;
   background-size: cover;
 }
 .page-header__top {
+  position: relative;
+
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
@@ -563,9 +571,9 @@ img {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
 .logo a {
   display: block;
@@ -573,28 +581,68 @@ img {
   width: 160px;
   height: 50px;
 
-  background-image: url(../img/sprite.png);
-  background-position: 0 -36px;
+  transition: .25s ease-in-out;
+
+  background: url("../img/sprite.png") no-repeat 0 -82px;
+}
+.logo a:hover {
+  opacity: .5;
+}
+.logo--footer a {
+  width: 115px;
+  height: 36px;
+
+  background: url("../img/sprite.png") no-repeat 0 -36px;
+}
+.main-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
 .main-nav__list {
   font-size: 15px;
   font-weight: bold;
   line-height: 1.3;
 
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.main-nav__list--footer .main-nav__item a {
+  color: #000;
+}
+.main-nav__list--footer .main-nav__item:hover {
+  border-radius: 8px;
+  background-color: #000;
+}
+.main-nav__list--footer .main-nav__item:hover a {
+  color: #fff;
 }
 .main-nav__item {
   position: relative;
 
-  display: inline-block;
-
   padding: 10px 13px;
 
   cursor: pointer;
-  vertical-align: middle;
   text-transform: uppercase;
 
   color: #fff;
@@ -603,10 +651,6 @@ img {
   display: block;
 
   color: #fff;
-}
-.main-nav__item:last-child:hover {
-  opacity: .5;
-  background: none;
 }
 .main-nav__item:hover {
   color: #000;
@@ -620,12 +664,15 @@ img {
   color: inherit;
 }
 .main-nav__cart {
-  display: block;
+  display: inline-block;
 
   width: 26px;
   height: 26px;
 
   background: url("../img/sprite.png") no-repeat 0 0;
+}
+.main-nav__cart:hover {
+  opacity: .5;
 }
 .main-nav__submenu-list {
   position: absolute;
@@ -647,8 +694,233 @@ img {
   border-radius: 0  8px 8px 8px;
   background: #fcff19;
 }
+.categories {
+  padding: 6.1% 0 14.16% 0;
+
+  background: url("../img/categories-bg.jpg") no-repeat;
+  background-size: cover;
+}
+.categories__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+
+  margin: 0 0 4.16%;
+  padding: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.categories__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+@media (max-width: 575px) {
+  .categories__list {
+            flex-direction: column;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+  }
+}
+.categories__item {
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 11% 1%;
+
+  text-align: center;
+
+  -webkit-flex-basis: 28.83%;
+  -ms-flex-preferred-size: 28.83%;
+          flex-basis: 28.83%;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+@media (max-width: 575px) {
+  .categories__item {
+    margin-bottom: 5%;
+  }
+  .categories__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.categories__item--backgr-1 {
+  background: url("../img/content/categories-item-bg-1.jpg") no-repeat;
+  background-size: cover;
+}
+.categories__item--backgr-2 {
+  background: url("../img/content/categories-item-bg-2.jpg") no-repeat;
+  background-size: cover;
+}
+.categories__item--backgr-3 {
+  background: url("../img/content/categories-item-bg-3.jpg") no-repeat;
+  background-size: cover;
+}
+.categories__item .btn--store {
+  display: none;
+}
+.categories__item:hover .btn--store {
+  display: block;
+}
+.categories__item-title {
+  font-size: .9rem;
+  line-height: 1.2;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+
+  color: #fcff19;
+}
+.categories__description {
+  font-size: 16px;
+  line-height: 1.2;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: #fff;
+}
+.popular-bikes {
+  padding: 6.1% 1.2% 3%;
+}
+.popular-bikes__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+
+  margin: 0 0 2%;
+  padding: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.popular-bikes__gallery {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 575px) {
+  .popular-bikes__gallery {
+            flex-direction: column;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .popular-bikes__label {
+    margin-bottom: 2%;
+  }
+}
+.popular-bikes__item {
+  box-sizing: border-box;
+  padding: 2%;
+}
+@media (max-width: 575px) {
+  .popular-bikes__item {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
+.popular-bikes__item-img img {
+  max-width: 100%;
+  height: auto;
+}
+.popular-bikes__item-footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .popular-bikes__item-footer {
+            flex-direction: column;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+  }
+}
+.popular-bikes__item-title,
+.popular-bikes__item-price {
+  font-size: 15px;
+  line-height: 1.2;
+
+  margin: 0;
+}
+.popular-bikes__item-price {
+  font-weight: normal;
+}
+.popular-bikes__form select {
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: 1.2;
+
+  box-sizing: border-box;
+  width: 145px;
+  padding: 13px 30px 13px 20px;
+
+  text-indent: .01px;
+  text-overflow: "";
+
+  border: 1px solid #8f8f8f;
+  border-radius: 8px;
+  outline: none;
+  background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAABU0lEQVQ4ja3Uv0tbYRjF8U9EAgp17H/iWKxIi5YUVLq4KFYKQqigKG4WhE4dMohdzFT7F4jQwR+0BSepKIitElMcWsjSoVumOuRJubxcg0PO+DznfN9zL++9hUqlopvq6SotAyxgAT/RxFcMdsgNhqeJemQLWeAyXmIcA6hiF09yYE9jVw3vC8xhMQtcwAzO4tQPmMQ2ShlYKWYT4WniJLKL0BvGh7hKmhzhOXZQjsM38AzfEu9lMP4DP2MW7xPjMcbwCf8wGk+R6hUOs8AyvuAvPibmU4wE8HsObBqrGMoCaxHaQx+2ktBFDqjdbC2ytSwQfuAx9lHE5h2Qtl5jKZrV28PexHQd0AP0490dsBXMh/cmu0iBwjAU0CLeJvs1TOERfqfhPCD8Cui+1nVYj/kbDEezRl6w07fcCOgAzrVex4OY5cI6NWzrj9b9vLe6/re5BSSWRnTsEgc4AAAAAElFTkSuQmCC") no-repeat 90% center;
+
+     -moz-appearance: none;
+  /* for IE */
+      -ms-appearance: none;
+  -webkit-appearance: none!important;
+          appearance: none!important;
+}
+@media (max-width: 767px) {
+  .popular-bikes__form select {
+    font-size: 1rem;
+
+    width: 100%;
+    margin-bottom: 2%;
+
+    background-position: 95% center;
+  }
+}
+.popular-bikes__form option {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.popular-bikes__form select::-ms-expand {
+  display: none;
+}
 .contact-us {
-  padding: 66px 0 85px 0;
+  padding: 6.1% 0 14.16% 0;
 
   background: url("../img/contact-us-bg.jpg") no-repeat;
   background-size: cover;
@@ -658,7 +930,7 @@ img {
   font-weight: bold;
   line-height: 1.2;
 
-  margin: 0 0 50px;
+  margin: 0 0 4.16%;
   padding: 0;
 
   text-align: center;
@@ -691,11 +963,13 @@ img {
   margin-bottom: 20px;
   padding: 13px 20px;
 
+  transition: .25s ease-in-out;
   text-transform: uppercase;
 
   border: 1px solid #dadada;
   border-radius: 10px;
   outline: none;
+  box-shadow: inset 0 1px 1px #808080;
 }
 .contact-us__form input:focus,
 .contact-us__form textarea:focus {
@@ -721,6 +995,12 @@ img {
 .contact-us__form input[name=second-name] {
   width: 47%;
 }
+@media (max-width: 575px) {
+  .contact-us__form input[name=first-name],
+  .contact-us__form input[name=second-name] {
+    width: 100%;
+  }
+}
 .contact-us__form input[name=first-name] {
   margin-right: 5%;
 }
@@ -735,8 +1015,23 @@ img {
 
   resize: none;
 }
+.page-footer {
+  padding: 16px 0;
+
+  background: #fcff19;
+}
+.page-footer--flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .btn {
   font-size: .9rem;
+  font-weight: bold;
   line-height: 1.2;
 
   display: inline-block;
@@ -762,6 +1057,57 @@ img {
 .btn--submit-large:active {
   background-color: #000;
 }
+.btn--buy {
+  color: #fff;
+}
+.btn--buy:hover,
+.btn--buy:active {
+  color: #fcff19;
+  background-color: #000;
+}
+@media (max-width: 767px) {
+  .btn--buy {
+    width: 100%;
+  }
+}
+.btn--toCategory {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+
+  width: 66px;
+  height: 77px;
+  margin: 0;
+  margin-left: -33px;
+  padding: 0;
+
+  background: url("../img/sprite.png") no-repeat 0 -210px;
+}
+.btn--toCategory:hover {
+  opacity: .7;
+}
+.btn--store {
+  position: absolute;
+  right: 25%;
+  bottom: 5%;
+  left: 25%;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+
+  color: #fff;
+  border: 3px solid #fff;
+}
+@media (max-width: 575px) {
+  .btn--store {
+    padding: 6px;
+  }
+}
 /*
 Icon classes can be used entirely standalone. They are named after their original file names.
 
@@ -785,7 +1131,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   height: 58px;
 
   background-image: url(../img/sprite.png);
-  background-position: 0 -96px;
+  background-position: 0 -142px;
 }
 .icon-cart {
   width: 26px;
@@ -794,17 +1140,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-image: url(../img/sprite.png);
   background-position: 0 0;
 }
+.icon-logo-black {
+  width: 115px;
+  height: 36px;
+
+  background-image: url(../img/sprite.png);
+  background-position: 0 -36px;
+}
 .icon-logo {
   width: 160px;
   height: 50px;
 
   background-image: url(../img/sprite.png);
-  background-position: 0 -36px;
+  background-position: 0 -82px;
 }
 .icon-scroll {
   width: 66px;
   height: 77px;
 
   background-image: url(../img/sprite.png);
-  background-position: 0 -164px;
+  background-position: 0 -210px;
 }

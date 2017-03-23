@@ -4,6 +4,7 @@
   vertical-align: middle;
   font-size: 0.9rem;
   line-height: 1.2;
+  font-weight: bold;
   padding: 12px;
   border: none;
   outline: none;
@@ -17,6 +18,52 @@
     &:hover,
     &:active {
       background-color: #000000;
+    }
+  }
+  &--buy {
+    color: #fff;
+    &:hover,
+    &:active {
+      color: @yellow;
+      background-color: #000;
+    }
+    @media @phone {
+      width: 100%;
+    }
+  }
+  &--toCategory {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+    bottom: 5%;
+    margin-left: -33px;
+    background: url("../img/sprite.png") no-repeat 0px -210px;
+    width: 66px;
+    height: 77px;
+    &:hover {
+      opacity: 0.7;
+    }
+
+  }
+  &--store {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 5%;
+    border: 3px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media @small {
+      padding: 6px;
     }
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Project</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>   
@@ -42,59 +42,95 @@
                   <li class="main-nav__submenu-item"><a href="#">Премиум</a></li>
                 </ul>
               </li>
-              <li class="main-nav__item"><a class="main-nav__cart"></a></li>
-            </ul>
+            </ul><a class="main-nav__cart"></a>
           </nav>
         </div>
-      </div><a class="btn btn--toCategory" id="to-category">111</a>
+      </div><a class="btn btn--toCategory" id="to-category"></a>
     </header>
     <section class="categories">
       <div class="container">
         <h2 class="categories__title">Категории</h2>
-        <ul class="categories__list">
-          <li class="categories__item">
-            <h2 class="categories__title">Односкоростные</h2>
-            <p class="categories__description">Готовы к испытаниям?</p><a class="btn btn--store" href="#">Перейти в магазин</a>
-          </li>
-          <li class="categories__item">
-            <h2 class="categories__title">Премиум серия</h2>
-            <p class="categories__description">Эксклюзивные компоненты</p><a class="btn btn--store" href="#">Перейти в магазин</a>
-          </li>
-          <li class="categories__item">
-            <h2 class="categories__title">Городские велосипеды</h2>
-            <p class="categories__description">Для городских улиц</p><a class="btn btn--store" href="#">Перейти в магазин</a>
-          </li>
-        </ul>
+        <div class="categories__list">
+          <div class="categories__item categories__item--backgr-1">
+            <h2 class="categories__item-title">Односкоростные</h2>
+            <p class="categories__description">Готовы к испытаниям?</p><a class="btn btn--store" href="#">Купить</a>
+          </div>
+          <div class="categories__item categories__item--backgr-2">
+            <h2 class="categories__item-title">Премиум серия</h2>
+            <p class="categories__description">Эксклюзивные компоненты</p><a class="btn btn--store" href="#">Купить</a>
+          </div>
+          <div class="categories__item categories__item--backgr-3">
+            <h2 class="categories__item-title">Городские велосипеды</h2>
+            <p class="categories__description">Для городских улиц</p><a class="btn btn--store" href="#">Купить</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="popular-bikes">
-      <h2 class="categories__title">Популярные
-        <div class="popular-bikes__gallery">
-          <article class="popular-bike__item">
-            <div class="popular-bike__item-img"><img src="img/content/bicycles/big-boy.jpg" width="430" height="290"/></div>
-            <footer class="popular-bike__item-footer">
-              <div class="wrapper">
-                <h3 class="popular-bike__item-title">Односкоростные</h3>
-                <p class="popular-bike__item-price">$249</p>
-              </div>
-              <form class="popular-bike__form" action="/" method="get">
-                <select name="config">
-                  <option disabled>Выбрать модель</option>
-                  <option value="1">Чебурашка</option>
-                  <option selected value="2">Крокодил Гена</option>
-                  <option value="3">Шапокляк</option>
-                  <option value="4">Крыса Лариса</option>
-                </select>
-                <button class="btn btn--submit" type="submit">Купить</button>
-              </form>
-            </footer>
-          </article>
-        </div>
-      </h2>
+      <h2 class="popular-bikes__title">Популярные</h2>
+      <div class="popular-bikes__gallery">
+        <article class="popular-bikes__item">
+          <div class="popular-bikes__item-img"><img src="img/content/bicycles/foxed-gear.jpg" width="430" height="290"/></div>
+          <footer class="popular-bikes__item-footer">
+            <div class="popular-bikes__label">
+              <h3 class="popular-bikes__item-title">Односкоростные</h3>
+              <p class="popular-bikes__item-price">$249</p>
+            </div>
+            <form class="popular-bikes__form" action="/" method="get">
+              <select name="option">
+                <option selected disabled>Опции</option>
+                <option value="1">Чебурашка</option>
+                <option value="2">Крокодил Гена</option>
+                <option value="3">Шапокляк</option>
+                <option value="4">Крыса Лариса</option>
+              </select>
+              <button class="btn btn--buy" type="submit">Купить</button>
+            </form>
+          </footer>
+        </article>
+        <article class="popular-bikes__item">
+          <div class="popular-bikes__item-img"><img src="img/content/bicycles/big-boy.jpg" width="430" height="290"/></div>
+          <footer class="popular-bikes__item-footer">
+            <div class="popular-bikes__label">
+              <h3 class="popular-bikes__item-title">Односкоростные</h3>
+              <p class="popular-bikes__item-price">$249</p>
+            </div>
+            <form class="popular-bikes__form" action="/" method="get">
+              <select name="option">
+                <option selected disabled>Опции</option>
+                <option value="1">Чебурашка</option>
+                <option value="2">Крокодил Гена</option>
+                <option value="3">Шапокляк</option>
+                <option value="4">Крыса Лариса</option>
+              </select>
+              <button class="btn btn--buy" type="submit">Купить</button>
+            </form>
+          </footer>
+        </article>
+        <article class="popular-bikes__item">
+          <div class="popular-bikes__item-img"><img src="img/content/bicycles/sanchaez.jpg" width="430" height="290"/></div>
+          <footer class="popular-bikes__item-footer">
+            <div class="popular-bikes__label">
+              <h3 class="popular-bikes__item-title">Односкоростные</h3>
+              <p class="popular-bikes__item-price">$249</p>
+            </div>
+            <form class="popular-bikes__form" action="/" method="get">
+              <select name="option">
+                <option selected disabled>Опции</option>
+                <option value="1">Чебурашка</option>
+                <option value="2">Крокодил Гена</option>
+                <option value="3">Шапокляк</option>
+                <option value="4">Крыса Лариса</option>
+              </select>
+              <button class="btn btn--buy" type="submit">Купить</button>
+            </form>
+          </footer>
+        </article>
+      </div>
     </section>
     <section class="contact-us">
       <div class="container">
-        <h2 class="contact-us__title">Contact-us</h2>
+        <h2 class="contact-us__title">Связаться с нами</h2>
         <form class="contact-us__form">
           <fieldset>
             <legend>Подалуйста, свяжитесь с нами по всем интересующим вас вопросам.</legend>
@@ -108,15 +144,17 @@
       </div>
     </section>
     <footer class="page-footer">
-      <div class="logo"><a class="icon-logo" href="index.html"></a></div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a>Велосипеды</a></li>
-          <li class="main-nav__item"><a>Запчасти</a></li>
-          <li class="main-nav__item"><a>Аксессуары</a></li>
-          <li class="main-nav__item"><a>Доплонительно</a></li>
-        </ul>
-      </nav>
+      <div class="container page-footer--flex">
+        <div class="logo logo--footer"><a href="#"></a></div>
+        <nav class="main-nav">
+          <ul class="main-nav__list main-nav__list--footer">
+            <li class="main-nav__item"><a>Велосипеды</a></li>
+            <li class="main-nav__item"><a>Запчасти</a></li>
+            <li class="main-nav__item"><a>Аксессуары</a></li>
+            <li class="main-nav__item"><a>Доплонительно</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
     <!--script(src="js/svg.js")-->
     <script src="js/jquery-3.2.0.min.js"></script>

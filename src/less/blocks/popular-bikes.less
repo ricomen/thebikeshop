@@ -1,0 +1,96 @@
+.popular-bikes {
+  padding: 6.1% 1.2% 3%;
+  &__title {
+    margin: 0 0 2%;
+    padding: 0;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    @media @small {
+      flex-direction: column;
+    }
+  }
+  &__label {
+    @media @tablet {
+      margin-bottom: 2%;
+    }
+  }
+  &__item {
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    @media @small {
+      margin-bottom: 2%;
+      width: 100%;
+    }
+    &-img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media @tablet {
+        flex-direction: column;
+      }
+    }
+
+    &-title,
+    &-price {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+    &-price {
+      font-weight: normal;
+    }
+  }
+  &__form {
+    select {
+      border: 1px solid #8f8f8f;
+      outline: none;
+      width: 145px;
+      font-size: 0.75rem;
+      line-height: 1.2;
+      font-weight: bold;
+      padding: 13px 30px 13px 20px;
+      border-radius: 8px;
+      -moz-appearance: none;
+      text-indent: 0.01px;
+      text-overflow: '';
+      /* for IE */
+      -ms-appearance: none;
+      appearance: none!important;
+      background: #fff data-uri("../img/icons/array-down.png") no-repeat 90% center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      @media @phone {
+        width: 100%;
+        font-size: 1rem;
+        background-position: 95% center;
+        margin-bottom: 2%;
+      }
+    }
+    option {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+
+    }
+    select::-ms-expand {
+      display: none;
+    }
+  }
+
+}
