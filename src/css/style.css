@@ -419,16 +419,6 @@ template {
 [hidden] {
   display: none;
 }
-/* .add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
-  font-family: @font-name;
-  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
-  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
-  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
-  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
-  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
-  font-weight: @font-weight;
-  font-style: @font-style;
-} */
 @media print {
   *,
   *:before,
@@ -491,35 +481,40 @@ template {
   font-weight: 700;
   font-style: normal;
 
-  src: url("../fonts/roboto/roboto_bold/Roboto-Bold-webfont.woff") format("woff");
+  src: url("../fonts/roboto/roboto-bold.woff") format("woff");
+  src: url("../fonts/roboto/roboto-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+
+  src: url("../fonts/roboto/roboto-regular.woff") format("woff");
+  src: url("../fonts/roboto/roboto-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
   font-style: italic;
 
-  src: url("../fonts/roboto/roboto_italic/Roboto-Italic-webfont.woff") format("woff");
+  src: url("../fonts/roboto/roboto-italic.woff") format("woff");
+  src: url("../fonts/roboto/roboto-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
   font-style: normal;
 
-  src: url("../fonts/roboto/roboto_light/Roboto-Light-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-style: normal;
-
-  src: url("../fonts/roboto/roboto_regular/Roboto-Regular-webfont.woff") format("woff");
+  src: url("../fonts/roboto/roboto-light.woff") format("woff");
+  src: url("../fonts/roboto/roboto-light.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-weight: 200;
   font-style: normal;
 
-  src: url("../fonts/roboto/roboto_thin/Roboto-Thin-webfont.woff") format("woff");
+  src: url("../fonts/roboto/roboto-thin.woff") format("woff");
+  src: url("../fonts/roboto/roboto-thin.woff2") format("woff2");
 }
 html {
   font-size: 16px;
@@ -532,7 +527,7 @@ html {
   }
 }
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 
   min-width: 320px;
 
@@ -546,15 +541,19 @@ img {
   border: none;
 }
 .container {
-  max-width: 1097px;
+  position: relative;
+
+  width: 91.3405100%;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 2.5%;
 }
 .page-header {
   position: relative;
 
   overflow: hidden;
+
+  transition: .5s;
 
   background: url("../img/slider/slide-1.jpg") no-repeat;
   background-size: cover;
@@ -582,17 +581,12 @@ img {
   height: 50px;
 
   transition: .25s ease-in-out;
-
-  background: url("../img/sprite.png") no-repeat 0 -82px;
 }
 .logo a:hover {
   opacity: .5;
 }
-.logo--footer a {
-  width: 115px;
-  height: 36px;
-
-  background: url("../img/sprite.png") no-repeat 0 -36px;
+.logo--footer a svg {
+  fill: #000;
 }
 .main-nav {
   display: -webkit-flex;
@@ -668,8 +662,6 @@ img {
 
   width: 26px;
   height: 26px;
-
-  background: url("../img/sprite.png") no-repeat 0 0;
 }
 .main-nav__cart:hover {
   opacity: .5;
@@ -693,6 +685,122 @@ img {
 
   border-radius: 0  8px 8px 8px;
   background: #fcff19;
+}
+.slider {
+  position: relative;
+
+  height: 906px;
+}
+@media (max-width: 992px) {
+  .slider {
+    height: 606px;
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    height: 406px;
+  }
+}
+@media (max-width: 575px) {
+  .slider {
+    height: 306px;
+  }
+}
+.slider__btn {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+
+  margin-top: -29px;
+
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.slider__btn--prev {
+  left: 1.2%;
+}
+.slider__btn--prev svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slider__btn--next {
+  right: 1.2%;
+}
+.slider__btn svg {
+  fill: #fff;
+}
+@media (max-width: 992px) {
+  .slider__btn svg {
+    width: 29px;
+    height: 29px;
+  }
+}
+.slider__btn svg:hover {
+  fill: #ccc;
+}
+.slider__nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+}
+.slider__indicator {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+
+  width: 33.33333%;
+  height: 100%;
+
+  transition: .5s ease-in-out;
+  transition-delay: .5s;
+
+  background-color: #fcff19;
+}
+.slider__item {
+  text-align: center;
+
+  color: #fff;
+}
+.slider__item-title {
+  font-size: 3.125rem;
+  font-weight: bold;
+  line-height: 1.1;
+
+  margin: 0;
+  padding: 20% 60px 0;
+
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .slider__item-title {
+    font-size: 2.125rem;
+  }
+}
+.slider__item-content {
+  font-size: 1.75rem;
+  font-weight: 100;
+  line-height: 1.1;
+}
+@media (max-width: 767px) {
+  .slider__item-content {
+    font-size: 1.5rem;
+  }
+}
+.slider__item-content span {
+  color: #fcff19;
+}
+.slider__item:nth-child(2) {
+  display: none;
+}
+.slider__item:nth-child(3) {
+  display: none;
 }
 .categories {
   padding: 6.1% 0 14.16% 0;
@@ -1086,6 +1194,11 @@ img {
 .btn--toCategory:hover {
   opacity: .7;
 }
+@media (max-width: 575px) {
+  .btn--toCategory {
+    display: none;
+  }
+}
 .btn--store {
   position: absolute;
   right: 25%;
@@ -1107,52 +1220,6 @@ img {
   .btn--store {
     padding: 6px;
   }
-}
-/*
-Icon classes can be used entirely standalone. They are named after their original file names.
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
-*/
-.icon-arrow-slider {
-  width: 58px;
-  height: 58px;
-
-  background-image: url(../img/sprite.png);
-  background-position: 0 -142px;
-}
-.icon-cart {
-  width: 26px;
-  height: 26px;
-
-  background-image: url(../img/sprite.png);
-  background-position: 0 0;
-}
-.icon-logo-black {
-  width: 115px;
-  height: 36px;
-
-  background-image: url(../img/sprite.png);
-  background-position: 0 -36px;
-}
-.icon-logo {
-  width: 160px;
-  height: 50px;
-
-  background-image: url(../img/sprite.png);
-  background-position: 0 -82px;
 }
 .icon-scroll {
   width: 66px;
