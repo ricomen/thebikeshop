@@ -52,7 +52,7 @@
     mainNav.classList.toggle("main-nav--closed");
     mainNavToggle.classList.toggle("main-nav__toggle--close");
   });
-
+  
   mainNav.classList.remove('main-nav--nojs');
 
 })();
