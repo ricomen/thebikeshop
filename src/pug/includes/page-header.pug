@@ -7,42 +7,48 @@ header.page-header
       .logo
         a(href="#")
           +icon("logo", 160, 50)
-      nav.main-nav
+      nav.main-nav.main-nav--closed.main-nav--nojs(aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement")
+        a.main-nav__toggle(href="#")
         ul.main-nav__list
-          li.main-nav__item Велосипеды
-            ul.main-nav__submenu-list
-              li.main-nav__submenu-item
+          li.main-nav__item
+            a(href="#") Велосипеды
+            ul.main-nav__list.main-nav__list--lvl2
+              li.main-nav__item
                 a(href="#") Односкоростные
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Городские
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Премиум
-          li.main-nav__item Запчасти
-            ul.main-nav__submenu-list
-              li.main-nav__submenu-item
+          li.main-nav__item
+            a(href="#") Запчасти
+            ul.main-nav__list.main-nav__list--lvl2
+              li.main-nav__item
                 a(href="#") Односкоростные
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Городские
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Премиум
-          li.main-nav__item Аксессуары
-            ul.main-nav__submenu-list
-              li.main-nav__submenu-item
+          li.main-nav__item
+            a(href="#") Аксессуары
+            ul.main-nav__list.main-nav__list--lvl2
+              li.main-nav__item
                 a(href="#") Односкоростные
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Городские
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Премиум
-          li.main-nav__item Доплонительно
-            ul.main-nav__submenu-list
-              li.main-nav__submenu-item
+          li.main-nav__item
+            a(href="#") Доплонительно
+            ul.main-nav__list.main-nav__list--lvl2
+              li.main-nav__item
                 a(href="#") Односкоростные
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Городские
-              li.main-nav__submenu-item
+              li.main-nav__item
                 a(href="#") Премиум
-        a.main-nav__cart
-          +icon("cart", 26)
+        .main-nav__user-block
+          a.main-nav__cart
+            +icon("cart", 26)
   a.btn.btn--toCategory()
     +icon("scroll",66,77)
   .slider

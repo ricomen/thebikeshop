@@ -39,5 +39,31 @@
         slides[numb-1].style.display = "block";
     }
   }
-  
+
 })(window);
+
+(function(){
+
+  var mainNav = document.querySelector(".main-nav");
+  var mainNavToggle = mainNav.querySelector(".main-nav__toggle");
+
+  mainNavToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    mainNav.classList.toggle("main-nav--closed");
+    mainNavToggle.classList.toggle("main-nav__toggle--close");
+  });
+  
+  mainNav.classList.remove('main-nav--nojs');
+
+})();
+
+(function() {
+
+  $(document).ready(function(){
+    $(".btn--toCategory").on("click", function(){      
+      var target = $(".categories").offset().top;
+        $('html, body').animate({scrollTop: target}, 400);
+    });
+  })
+
+})(jQuery);
