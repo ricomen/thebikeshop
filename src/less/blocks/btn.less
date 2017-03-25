@@ -11,6 +11,7 @@
   border-radius: 10px;
   text-transform: uppercase;
   transition: 0.25s ease-in-out;
+  text-decoration: none;
   &--submit-large {
     width: 100%;
     color: #fff;
@@ -31,6 +32,15 @@
       width: 100%;
     }
   }
+  &--black {
+    color: @yellow;
+    background-color: #000;
+    &:hover,
+    &:active {
+      color: #fff;
+      background-color: #b7b7b7;
+    }
+  }
   &--toCategory {
     position: absolute;
     padding: 0;
@@ -38,9 +48,7 @@
     left: 50%;
     bottom: 5%;
     margin-left: -33px;
-    background: url("../img/sprite.png") no-repeat 0px -210px;
-    width: 66px;
-    height: 77px;
+    z-index: 50;
     &:hover {
       opacity: 0.7;
     }
@@ -50,23 +58,20 @@
 
   }
   &--store {
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    bottom: 5%;
+    display: inline-block;
+    vertical-align: top;
     border: 3px solid #fff;
     color: #fff;
     text-decoration: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
     @media @small {
       padding: 6px;
     }
+
   }
 }

@@ -39,5 +39,5 @@
         slides[numb-1].style.display = "block";
     }
   }
-
+  
 })(window);
