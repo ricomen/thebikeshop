@@ -1,8 +1,30 @@
 .page-footer {
   padding: 16px 0;
   background: #fcff19;
-  &--flex {
-    display: flex;
-    justify-content: space-between;
+}
+
+.footer-nav {
+  float: right;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {    
+    border-radius: 4px;
+    background: #000;
+    a {
+      color: #fff;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 15px;
+      line-height: 1.2;
+      padding: 4px;
+      text-decoration: none;
+      transition: opacity 0.25s esae-in-out;
+      &:hover {
+        opacity: 0.8
+      }
+    }
   }
 }
