@@ -550,6 +550,15 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+.container:before,
+.container:after {
+  display: table;
+
+  content: "";
+}
+.container:after {
+  clear: both;
+}
 .page-header {
   overflow: hidden;
 
@@ -583,6 +592,9 @@ img {
 }
 .logo a:hover {
   opacity: .5;
+}
+.logo a svg {
+  fill: #fff;
 }
 .logo--footer a svg {
   fill: #000;
@@ -836,6 +848,8 @@ img {
 @media (max-width: 767px) {
   .slider__item-content {
     font-size: 1.5rem;
+
+    padding: 0 20px;
   }
 }
 .slider__item-content span {
@@ -969,6 +983,7 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+  overflow-y: auto;
 
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -990,6 +1005,10 @@ img {
 .popular-bikes__item {
   box-sizing: border-box;
   padding: 2%;
+
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 @media (max-width: 575px) {
   .popular-bikes__item {
@@ -1173,14 +1192,35 @@ img {
 
   background: #fcff19;
 }
-.page-footer--flex {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+.footer-nav {
+  float: right;
+}
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
 
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-          justify-content: space-between;
+  list-style: none;
+}
+.footer-nav__item {
+  border-radius: 4px;
+  background: #000;
+}
+.footer-nav__item a {
+  font-size: 15px;
+  line-height: 1.2;
+
+  display: block;
+
+  margin-bottom: 2px;
+  padding: 4px;
+
+  transition: opacity .25s esae-in-out;
+  text-decoration: none;
+
+  color: #fff;
+}
+.footer-nav__item a:hover {
+  opacity: .8;
 }
 .btn {
   font-size: .9rem;
@@ -1242,6 +1282,15 @@ img {
   margin: 0;
   margin-left: -33px;
   padding: 0;
+
+  -webkit-animation: scrollDown;
+          animation: scrollDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .btn--toCategory:hover {
   opacity: .7;
@@ -1268,5 +1317,21 @@ img {
 @media (max-width: 575px) {
   .btn--store {
     padding: 6px;
+  }
+}
+@-webkit-keyframes scrollDown {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 1%;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 1%;
   }
 }
