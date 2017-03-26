@@ -51,24 +51,23 @@
     });
 
    $(".main-nav").removeClass('main-nav--nojs');
+
     $(".main-nav__toggle").on("click", function() {
 
-       $(".main-nav").toggleClass('main-nav--closed');
+      $(".main-nav").toggleClass('main-nav--closed');
+
+      if( $(".main-nav").hasClass('main-nav--closed')) {
+        $(".main-nav__list").animate({
+          left: "-100%"
+        }, 300);
+      } else {
+         $(".main-nav__list").animate({
+          left: "0"
+        }, 300);
+      }
 
       $(this).toggleClass('main-nav__toggle--close');
 
-      if ($(this).hasClass('main-nav__toggle--close')) {
-         $("body").animate({
-            right: "80%",
-            display: "block"
-            },400);
-      } else {
-
-      $("body").animate({
-          right: "0",
-          display: "none"
-          },400);
-      };
     });
   })
 })(jQuery);

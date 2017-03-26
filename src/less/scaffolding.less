@@ -1,16 +1,11 @@
 html {
   height: 100%;
-  font-size: @font-size;
-  
-  @media @tablet {
-    position: relative;
-  }
+  font-size: @font-size;  
   @media @small {
     font-size: 12px;
   }
 }
-body {  
-  position: relative;
+body {    
   font-family: "Roboto", "Arial", sans-serif;
   min-width: 320px;
   color: #000;
@@ -26,10 +21,11 @@ img {
   border: none;
 }
 
-.container {    
+.container {
   .center();
   width: 91.3405100%;
   max-width: 1200px;
+  // overflow: hidden;
   // max-width: 1097px;  
 }
 

@@ -13,24 +13,26 @@
     text-transform: uppercase;
   }
   &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    margin-left: -2.2%;
+    margin-right: -2.2%;
+    font-size: 0;
     @media @tablet {
-      flex-direction: column;
+      display: block;      
     }
   }
-  &__item {
+  &__item {  
+    display: inline-block;  
     font-size: 15px;    
     text-align: center;
     padding-top: 130px;
     padding-bottom: 38px;
+    margin-right: 4.5%;
     min-height: 140px;
-    flex-basis: 28.83%;
-    flex-grow: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;    
+    width: 28.83%;
+    box-sizing: border-box;
     @media @tablet {
+      width: 100%;
+      display: block;
       margin-bottom: 5%;
       &:last-child {
         margin-bottom: 0;
