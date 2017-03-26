@@ -1,19 +1,22 @@
 html {
   height: 100%;
   font-size: @font-size;
+  @media @tablet {
+    position: relative;
+  }
   @media @small {
     font-size: 12px;
   }
 }
-body {
+body {  
+  position: relative;
   font-family: "Roboto", "Arial", sans-serif;
   min-width: 320px;
   color: #000;
   background: #fff;
-
   outline: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;  
 }
 
 img {
@@ -22,8 +25,7 @@ img {
   border: none;
 }
 
-.container {  
-  position: relative;
+.container {    
   .center();
   width: 91.3405100%;
   max-width: 1200px;

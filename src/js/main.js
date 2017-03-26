@@ -42,28 +42,33 @@
 
 })(window);
 
-(function(){
-
-  var mainNav = document.querySelector(".main-nav");
-  var mainNavToggle = mainNav.querySelector(".main-nav__toggle");
-
-  mainNavToggle.addEventListener("click", function(e) {
-    e.preventDefault();
-    mainNav.classList.toggle("main-nav--closed");
-    mainNavToggle.classList.toggle("main-nav__toggle--close");
-  });
-
-  mainNav.classList.remove('main-nav--nojs');
-
-})();
-
-(function() {
+(function() {  
 
   $(document).ready(function(){
     $(".btn--toCategory").on("click", function(){      
       var target = $(".categories").offset().top;
         $('html, body').animate({scrollTop: target}, 400);
     });
-  })
 
+   $(".main-nav").removeClass('main-nav--nojs');
+    $(".main-nav__toggle").on("click", function() {
+
+       $(".main-nav").toggleClass('main-nav--closed');
+
+      $(this).toggleClass('main-nav__toggle--close');
+
+      if ($(this).hasClass('main-nav__toggle--close')) {
+         $("body").animate({
+            right: "80%",
+            display: "block"
+            },400);
+      } else {
+
+      $("body").animate({
+          right: "0",
+          display: "none"
+          },400);
+      };
+    });
+  })
 })(jQuery);
