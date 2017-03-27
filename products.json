@@ -1,0 +1,23 @@
+{
+  "000010": {
+    "name": "Односкоростной",
+    "cost": 15.500,
+    "decription": "Велосипед для города",
+    "img": "img/content/bicycles/fixed-gear.jpg",
+    "option" : "Подножка"
+  },
+  "000011": {
+    "name": "Горный",
+    "cost": 25.500,
+    "decription": "Велосипед для бездорожья",
+    "img": "img/content/bicycles/big-boy.jpg",
+    "option" : "Подножка"
+  },
+  "000012": {
+    "name": "Городской",
+    "cost": 10.000,
+    "decription": "Велосипед для города",
+    "img": "img/content/bicycles/sanchaez.jpg",
+    "option" : "Подножка"
+  }
+}
