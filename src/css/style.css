@@ -861,6 +861,82 @@ img {
 .slider__item:nth-child(3) {
   display: none;
 }
+.cart {
+  padding: 2% 1.2% 4%;
+}
+.cart__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+
+  margin: 0 0 2%;
+  padding: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.cart__item {
+  display: inline-block;
+
+  width: 32%;
+}
+@media (max-width: 992px) {
+  .cart__item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cart__item {
+    width: 100%;
+  }
+}
+.cart__item-img img {
+  min-width: 100%;
+  height: auto;
+}
+.breadcrumbs {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+.breadcrumbs li {
+  position: relative;
+
+  display: inline;
+
+  padding-right: 40px;
+}
+.breadcrumbs li:after {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+
+  width: 8px;
+  height: 8px;
+
+  content: "";
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+
+  background-color: #000;
+}
+.breadcrumbs a {
+  text-decoration: none;
+
+  color: #000;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs .current {
+  color: #aba9a7;
+}
+.breadcrumbs .current::after {
+  display: none;
+}
 .categories {
   padding: 6.1% 0 14.16% 0;
 
@@ -983,7 +1059,6 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
-  overflow-y: auto;
 
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1005,10 +1080,6 @@ img {
 .popular-bikes__item {
   box-sizing: border-box;
   padding: 2%;
-
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 @media (max-width: 575px) {
   .popular-bikes__item {
@@ -1017,8 +1088,12 @@ img {
   }
 }
 .popular-bikes__item-img img {
+  display: block;
+
   max-width: 100%;
   height: auto;
+
+  background-color: red;
 }
 .popular-bikes__item-footer {
   display: -webkit-flex;

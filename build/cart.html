@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>TheBikeShop</title>
+    <title>TheBikeShop-Cart</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
@@ -79,44 +79,16 @@
         </div>
       </div>
     </header>
-    <section class="categories">
-      <div class="container">
-        <h2 class="categories__title">Категории</h2>
-        <div class="categories__list">
-          <div class="categories__item categories__item--backgr-1">
-            <h2 class="categories__item-title">Односкоростные</h2>
-            <p class="categories__description">Готовы к испытаниям?</p><a class="btn btn--store" href="#">Купить</a>
-          </div>
-          <div class="categories__item categories__item--backgr-2">
-            <h2 class="categories__item-title">Премиум серия</h2>
-            <p class="categories__description">Эксклюзивные компоненты</p><a class="btn btn--store" href="#">Купить</a>
-          </div>
-          <div class="categories__item categories__item--backgr-3">
-            <h2 class="categories__item-title">Городские велосипеды</h2>
-            <p class="categories__description">Для городских улиц</p><a class="btn btn--store" href="#">Купить</a>
-          </div>
-        </div>
+    <div class="page-cart">
+      <div class="container">   
+        <h2 class="page-cart__title">Корзина</h2>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li class="current">Корзина</li>
+        </ul>
+        <div class="cart"></div>
       </div>
-    </section>
-    <section class="popular-bikes">
-      <h2 class="popular-bikes__title">Популярные</h2>
-      <div class="popular-bikes__gallery"> </div>
-    </section>
-    <section class="contact-us">
-      <div class="container">
-        <h2 class="contact-us__title">Связаться с нами</h2>
-        <form class="contact-us__form">
-          <fieldset>
-            <legend>Подалуйста, свяжитесь с нами по всем интересующим вас вопросам.</legend>
-            <input type="text" name="first-name" placeholder="Ваше имя">
-            <input type="text" name="second-name" placeholder="Ваше имя">
-            <input type="text" name="email" placeholder="Ваш E-mail">
-            <textarea rows="5" cols="40" placeholder="Ваше вопрос..."></textarea>
-            <button class="btn  btn--submit-large" type="submit">Отправить</button>
-          </fieldset>
-        </form>
-      </div>
-    </section>
+    </div>
     <footer class="page-footer">
       <div class="container">
         <div class="logo logo--footer"><a href="#">
@@ -134,9 +106,8 @@
         </nav>
       </div>
     </footer>
-    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/jquery-3.2.0.min.js"> </script>
     <script src="js/main.js"></script>
-    <script src="js/eshop.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

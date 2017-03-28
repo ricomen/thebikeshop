@@ -5,7 +5,7 @@
     <title>TheBikeShop</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;"><defs><style>.cls-1{fill-rule:evenodd}</style><style id="style10">.cls-1{fill-rule:evenodd}</style></defs><symbol fill="#fff" id="icon-cart" viewBox="0 0 26 26"><path d="M1511.31 57h3.13a1.315 1.315 0 0 1 1.31 1.315v.085a1.315 1.315 0 0 1-1.31 1.315h-3.13A1.315 1.315 0 0 1 1510 58.4v-.085a1.315 1.315 0 0 1 1.31-1.315zm3.44 2.625h19.97a1.252 1.252 0 0 1 1.25 1.254v.087a1.252 1.252 0 0 1-1.25 1.253h-19.97a1.252 1.252 0 0 1-1.25-1.253v-.088a1.252 1.252 0 0 1 1.25-1.253zm.98.641l2.56 16.856a1.244 1.244 0 0 1-1.03 1.428l-.12.02a1.252 1.252 0 0 1-1.44-1.031l-2.56-16.856a1.251 1.251 0 0 1 1.04-1.428l.12-.02a1.247 1.247 0 0 1 1.43 1.03zm.72 10.516h16.7a1.321 1.321 0 0 1 1.32 1.324v.1a1.321 1.321 0 0 1-1.32 1.323h-16.7a1.33 1.33 0 0 1-1.33-1.323V72.1a1.33 1.33 0 0 1 1.33-1.319zm.49 5.281h14.72a1.185 1.185 0 0 1 1.18 1.188v.125a1.185 1.185 0 0 1-1.18 1.187h-14.72a1.187 1.187 0 0 1-1.19-1.187v-.126a1.187 1.187 0 0 1 1.19-1.188zm14.84-3.952l1.5-9.318a1.254 1.254 0 0 1 1.41-1.068l.24.033a1.25 1.25 0 0 1 1.08 1.4l-1.51 9.317a1.245 1.245 0 0 1-1.4 1.068l-.25-.033a1.25 1.25 0 0 1-1.07-1.4zm-12.72 8.077a1.48 1.48 0 1 1-1.94 1.406 1.74 1.74 0 0 1 1.94-1.406zm11.97 0a1.48 1.48 0 1 1-1.94 1.406 1.74 1.74 0 0 1 1.94-1.406zm-9.31-18.688a.5.5 0 0 1 .5.5v9.57a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5V62a.5.5 0 0 1 .5-.5zm5.28 0a.5.5 0 0 1 .5.5v9.563a.5.5 0 0 1-1 0V62a.5.5 0 0 1 .5-.5zm-10.27 4.75h16.63a.478.478 0 0 1 .48.482v.068a.478.478 0 0 1-.48.482h-16.63a.484.484 0 0 1-.48-.482v-.068a.484.484 0 0 1 .48-.482z" transform="translate(-1510 -57) "/></symbol>
 <symbol id="icon-logo" viewBox="0 0 160 49.999999" >
@@ -34,7 +34,7 @@
                 <ul class="main-nav__list-lvl2"></ul>
               </li>
             </ul>
-            <div class="main-nav__user-block"><a class="main-nav__cart" href="#">
+            <div class="main-nav__user-block"><a class="main-nav__cart" href="cart.html">
                 <svg class="icon icon-cart " width="26" height="26" data-img="img/icons/icon-cart.png">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -100,65 +100,7 @@
     </section>
     <section class="popular-bikes">
       <h2 class="popular-bikes__title">Популярные</h2>
-      <div class="popular-bikes__gallery">
-        <article class="popular-bikes__item">
-          <div class="popular-bikes__item-img"><img src="img/content/bicycles/fixed-gear.jpg" width="430" height="290"/></div>
-          <footer class="popular-bikes__item-footer">
-            <div class="popular-bikes__label">
-              <h3 class="popular-bikes__item-title">Односкоростные</h3>
-              <p class="popular-bikes__item-price">$249</p>
-            </div>
-            <form class="popular-bikes__form" action="/" method="get">
-              <select name="option">
-                <option selected disabled>Опции</option>
-                <option value="1">Чебурашка</option>
-                <option value="2">Крокодил Гена</option>
-                <option value="3">Шапокляк</option>
-                <option value="4">Крыса Лариса</option>
-              </select>
-              <button class="btn btn--buy" type="submit">Купить</button>
-            </form>
-          </footer>
-        </article>
-        <article class="popular-bikes__item">
-          <div class="popular-bikes__item-img"><img src="img/content/bicycles/big-boy.jpg" width="430" height="290"/></div>
-          <footer class="popular-bikes__item-footer">
-            <div class="popular-bikes__label">
-              <h3 class="popular-bikes__item-title">Односкоростные</h3>
-              <p class="popular-bikes__item-price">$249</p>
-            </div>
-            <form class="popular-bikes__form" action="/" method="get">
-              <select name="option">
-                <option selected disabled>Опции</option>
-                <option value="1">Чебурашка</option>
-                <option value="2">Крокодил Гена</option>
-                <option value="3">Шапокляк</option>
-                <option value="4">Крыса Лариса</option>
-              </select>
-              <button class="btn btn--buy" type="submit">Купить</button>
-            </form>
-          </footer>
-        </article>
-        <article class="popular-bikes__item">
-          <div class="popular-bikes__item-img"><img src="img/content/bicycles/sanchaez.jpg" width="430" height="290"/></div>
-          <footer class="popular-bikes__item-footer">
-            <div class="popular-bikes__label">
-              <h3 class="popular-bikes__item-title">Односкоростные</h3>
-              <p class="popular-bikes__item-price">$249</p>
-            </div>
-            <form class="popular-bikes__form" action="/" method="get">
-              <select name="option">
-                <option selected disabled>Опции</option>
-                <option value="1">Чебурашка</option>
-                <option value="2">Крокодил Гена</option>
-                <option value="3">Шапокляк</option>
-                <option value="4">Крыса Лариса</option>
-              </select>
-              <button class="btn btn--buy" type="submit">Купить</button>
-            </form>
-          </footer>
-        </article>
-      </div>
+      <div class="popular-bikes__gallery"> </div>
     </section>
     <section class="contact-us">
       <div class="container">
@@ -194,5 +136,7 @@
     </footer>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/eshop.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

@@ -54,31 +54,10 @@ header.page-header
               //- li.main-nav__item
               //-   a(href="#") Премиум
         .main-nav__user-block
-          a.main-nav__cart(href="#")
+          a.main-nav__cart(href="cart.html")
             +icon("cart", 26)
-  .slider
-    a.btn.btn--toCategory()
-      +icon("scroll",66,77)
-    button.slider__btn(data-direction="prev").slider__btn--prev
-      +icon("arrow", 58, 58)
-    button.slider__btn(data-direction="next").slider__btn--next
-      +icon("arrow", 58, 58)    
-    .container
-      .slider__item
-        .slider__item-title Уникальный Велосипед
-        p.slider__item-content Вы <span>путешествуете</span>, мы <span>создаем.</span>
-        a.btn.btn--black(href="/") Купить
-      .slider__item
-        .slider__item-title Слайд 2
-        p.slider__item-content Вы <span>путешествуете</span>, мы <span>создаем.</span>
-        a.btn.btn--black(href="/") Купить
-      .slider__item
-        .slider__item-title Слайд 3
-        p.slider__item-content Вы <span>путешествуете</span>, мы <span>создаем.</span>
-        a.btn.btn--black(href="/") Купить
-    .container
-    .slider__nav
-      .slider__indicator
+  include slider
+
 
 
 
