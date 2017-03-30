@@ -1328,6 +1328,7 @@ img {
 }
 .btn--buy {
   color: #fff;
+  background-color: #b7b7b7;
 }
 .btn--buy:hover
  {
