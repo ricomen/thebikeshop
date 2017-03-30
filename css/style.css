@@ -1329,12 +1329,15 @@ img {
 .btn--buy {
   color: #fff;
 }
-.btn--buy:hover,
-.btn--buy:active {
+.btn--buy:hover
+ {
   color: #fcff19;
   background-color: #000;
 }
 @media (max-width: 767px) {
+  .btn {
+    transition: none;
+  }
   .btn--buy {
     width: 100%;
   }
