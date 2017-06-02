@@ -708,16 +708,14 @@ img {
   height: 3px;
 }
 .main-nav__toggle--close::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 
   box-shadow: 0 0 #fff;
 }
 .main-nav__toggle--close::after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 @media (max-width: 992px) {
   .main-nav__toggle {
@@ -780,9 +778,8 @@ img {
   left: 1.2%;
 }
 .slider__btn--prev svg {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
 }
 .slider__btn--next {
   right: 1.2%;
@@ -917,9 +914,8 @@ img {
   height: 8px;
 
   content: "";
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 
   background-color: #000;
 }
@@ -1056,20 +1052,17 @@ img {
   text-transform: uppercase;
 }
 .popular-bikes__gallery {
-  display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
 
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 @media (max-width: 575px) {
   .popular-bikes__gallery {
-            flex-direction: column;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
 }
 @media (max-width: 992px) {
@@ -1096,23 +1089,19 @@ img {
   background-color: red;
 }
 .popular-bikes__item-footer {
-  display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
 
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 992px) {
   .popular-bikes__item-footer {
-            flex-direction: column;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
 }
 .popular-bikes__item-title,
@@ -1358,14 +1347,10 @@ img {
   margin-left: -33px;
   padding: 0;
 
-  -webkit-animation: scrollDown;
-          animation: scrollDown;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation: scrollDown;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-iteration-count: infinite;
 }
 .btn--toCategory:hover {
   opacity: .7;
@@ -1392,14 +1377,6 @@ img {
 @media (max-width: 575px) {
   .btn--store {
     padding: 6px;
-  }
-}
-@-webkit-keyframes scrollDown {
-  0% {
-    bottom: 5%;
-  }
-  100% {
-    bottom: 1%;
   }
 }
 @keyframes scrollDown {
